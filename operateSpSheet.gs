@@ -1,3 +1,9 @@
+/**
+ * operateSpSheet.gs
+ *
+ * スプレッドシートの操作を行う。
+ *
+ */
 
 function testFunc() {
   getSheetObj()

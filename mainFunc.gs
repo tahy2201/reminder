@@ -1,8 +1,12 @@
+/**
+ * mainFunc.gs
+ *
+ * メイン
+ *
+ */
 
-function testPush() {
- doPush(getAllScheduleSimple()); 
-}
-
+// reminderメイン
+// Line側に書き込むと動く。
 function doPost(e) {
   // WebHookで受信した応答用Token
   var replyToken = JSON.parse(e.postData.contents).events[0].replyToken;
@@ -92,4 +96,9 @@ function rmSchedule(umArray) {
   for (var i in delNums) {
     deleteSchedule(delNums[i])
   }  
+}
+
+// テスト用
+function testPush() {
+ doPush(getAllScheduleSimple()); 
 }
