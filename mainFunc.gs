@@ -58,7 +58,7 @@ function doPost(e) {
 
 function doPush(pushText) {
   
-  UrlFetchApp.fetch(PropertiesService.getScriptProperties().getProperty('REPLY_URL'), {
+  UrlFetchApp.fetch(PropertiesService.getScriptProperties().getProperty('PUSH_URL'), {
     'headers': {
       'Content-Type': 'application/json; charset=UTF-8',
       'Authorization': 'Bearer ' + PropertiesService.getScriptProperties().getProperty('ACCESS_TOKEN'),
@@ -100,5 +100,6 @@ function rmSchedule(umArray) {
 
 // テスト用
 function testPush() {
- doPush(getAllScheduleSimple()); 
+  console.log(getAllScheduleSimple())
+ noticeSchedule(); 
 }
